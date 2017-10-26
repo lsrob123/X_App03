@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:master="clr-namespace:X3._Master;assembly=X3"
+                  xmlns:dashboard="clr-namespace:X3.Domains.Dashboard;assembly=X3"
+                  x:Class="X3._Master.MasterDetail" MasterBehavior="Popover">
+    <MasterDetailPage.Master>
+        <master:Master x:Name="Master" />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <!--<dashboard:Dashboard></dashboard:Dashboard>-->
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

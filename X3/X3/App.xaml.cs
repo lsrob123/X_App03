@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using Lx.X.Utilities.Mediator;
+using X3._Master;
+using Xamarin.Forms;
 
 namespace X3
 {
@@ -7,8 +9,9 @@ namespace X3
         public App()
         {
             InitializeComponent();
+            Mediator.Start();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new MasterDetail();
         }
 
         protected override void OnStart()

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="X3._Master.Master" Title="X3">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" Text="Dashboard" x:Name="BtnDashboard" Clicked="BtnDashboard_OnClicked"></Button>
+            <Button Grid.Column="0" Grid.Row="1" Text="Contacts" x:Name="BtnContacts" Clicked="BtnContacts_OnClicked"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

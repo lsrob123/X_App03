@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace X3.Views
+namespace X3.Domains.Dashboard
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Page1 : ContentPage
+	public partial class Dashboard : ContentPage
 	{
-		public Page1 ()
+		public Dashboard ()
 		{
 			InitializeComponent ();
 		}
