@@ -1,7 +1,6 @@
 ﻿using System;
-using Lx.X.Utilities.Mediator;
 using X3._Shared.DetailPages;
-using X3._Shared.MediatorMessages;
+using X3._Shared.Messaging;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,11 +9,8 @@ namespace X3._Master
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Master : ContentPage
     {
-        private readonly IMediator _mediator;
-
         public Master()
         {
-            _mediator = Mediator.Default;
             InitializeComponent();
         }
 
@@ -31,8 +27,7 @@ namespace X3._Master
         private void OpenDetailPage(string detailPage)
         {
             Title = $"X3 - {detailPage}";
-            _mediator.Publish(new OpenDetailPageMessage(detailPage));
-
+            MessagingCenter.Send(this, nameof(OpenDetailPageMessage), new OpenDetailPageMessage(detailPage));
         }
     }
 }

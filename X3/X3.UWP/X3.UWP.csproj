@@ -152,6 +152,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Lx.X.Utilities\Lx.X.Utilities.csproj">
+      <Project>{731b2fb4-58aa-4897-9b12-e6831672267a}</Project>
+      <Name>Lx.X.Utilities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\X3\X3.csproj">
       <Project>{23223ebb-2789-482f-aec0-37a547b3da80}</Project>
       <Name>X3</Name>

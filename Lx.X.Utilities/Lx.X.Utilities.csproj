@@ -36,9 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Infrastructure\IMessageBase.cs" />
-    <Compile Include="Mediator\IMediator.cs" />
-    <Compile Include="Mediator\IMediatorMessageHandler.cs" />
-    <Compile Include="Mediator\Mediator.cs" />
+    <Compile Include="Infrastructure\MessageBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

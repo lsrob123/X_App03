@@ -53,7 +53,7 @@
     </Compile>
     <Compile Include="_Shared\DetailPages\Constants.cs" />
     <Compile Include="_Shared\DetailPages\Resolver.cs" />
-    <Compile Include="_Shared\MediatorMessages\OpenDetailPageMessage.cs" />
+    <Compile Include="_Shared\Messaging\OpenDetailPageMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -74,12 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Lx.X.Utilities\Lx.X.Utilities.csproj">
-      <Project>{731b2fb4-58aa-4897-9b12-e6831672267a}</Project>
-      <Name>Lx.X.Utilities</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="_Master\MasterDetail.xaml">
@@ -104,6 +98,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lx.X.Utilities\Lx.X.Utilities.csproj">
+      <Project>{731b2fb4-58aa-4897-9b12-e6831672267a}</Project>
+      <Name>Lx.X.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />

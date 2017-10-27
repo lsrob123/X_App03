@@ -1,4 +1,5 @@
-﻿using X3.Domains.Contacts;
+﻿using System.Threading.Tasks;
+using X3.Domains.Contacts;
 using X3.Domains.Dashboard;
 using Xamarin.Forms;
 
@@ -6,26 +7,26 @@ namespace X3._Shared.DetailPages
 {
     public static class Resolver
     {
-        public static readonly NavigationPage Dashboard = new NavigationPage(new Dashboard());
-        public static readonly NavigationPage Contacts = new NavigationPage(new Contacts());
-
         public static NavigationPage Resolve(string pageType)
         {
             switch (pageType)
             {
                 case Constants.Dashboard:
-                    return new NavigationPage(new Dashboard());
+                    return CreateDetailPage(new Dashboard());
                 case Constants.Contacts:
-                    return new NavigationPage(new Contacts());
-                //case Constants.Dashboard:
-                //    return Dashboard;
-                //case Constants.Contacts:
-                //    return Contacts;
+                    return CreateDetailPage(new Contacts());
                 default:
-                    break;
+                    return null;
             }
+        }
 
-            return null;
+        private static NavigationPage CreateDetailPage(Page detailPage)
+        {
+            detailPage.ToolbarItems.Add(new ToolbarItem("Filter", null, async () => await Task.Run(() =>
+            {
+                var a = 1;
+            })));
+            return new NavigationPage(detailPage) {BarBackgroundColor = Color.OrangeRed, BarTextColor = Color.White};
         }
     }
 }
