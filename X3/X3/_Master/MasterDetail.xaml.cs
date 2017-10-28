@@ -20,7 +20,11 @@ namespace X3._Master
         public void Handle(OpenDetailPageMessage message)
         {
             Detail = Resolver.Resolve(message.Data);
-            IsPresented = false;
+
+            if (!MasterBehavior.Equals(MasterBehavior.Split) &&
+                !MasterBehavior.Equals(MasterBehavior.SplitOnLandscape) &&
+                !MasterBehavior.Equals(MasterBehavior.SplitOnPortrait))
+                IsPresented = false;
         }
     }
 }

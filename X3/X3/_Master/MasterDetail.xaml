@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   xmlns:master="clr-namespace:X3._Master;assembly=X3"
                   xmlns:dashboard="clr-namespace:X3.Domains.Dashboard;assembly=X3"
-                  x:Class="X3._Master.MasterDetail" MasterBehavior="Popover">
+                  x:Class="X3._Master.MasterDetail" MasterBehavior="Default">
     <MasterDetailPage.Master>
         <master:Master x:Name="Master" />
     </MasterDetailPage.Master>
