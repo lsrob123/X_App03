@@ -1,4 +1,4 @@
-﻿namespace X3._Shared.DetailPages
+﻿namespace X3._Shared.Common
 {
     public static class Constants
     {

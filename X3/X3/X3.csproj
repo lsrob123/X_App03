@@ -51,8 +51,11 @@
     <Compile Include="_Master\MasterDetail.xaml.cs">
       <DependentUpon>MasterDetail.xaml</DependentUpon>
     </Compile>
-    <Compile Include="_Shared\DetailPages\Constants.cs" />
-    <Compile Include="_Shared\DetailPages\Resolver.cs" />
+    <Compile Include="_Shared\Common\Constants.cs" />
+    <Compile Include="_Shared\Common\FilePathResolverBase.cs" />
+    <Compile Include="_Shared\Common\IDetailPageResolver.cs" />
+    <Compile Include="_Shared\Common\IFilePathResolver.cs" />
+    <Compile Include="_Shared\Common\DetailPageResolver.cs" />
     <Compile Include="_Shared\Messaging\OpenDetailPageMessage.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -106,8 +109,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="_Images\file-1.png" />
-    <EmbeddedResource Include="_Images\file-19.png" />
+    <None Include="_Images\file01.png" />
+    <None Include="_Images\file19.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />

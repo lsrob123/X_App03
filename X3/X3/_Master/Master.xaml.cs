@@ -1,5 +1,5 @@
 ﻿using System;
-using X3._Shared.DetailPages;
+using X3._Shared.Common;
 using X3._Shared.Messaging;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
