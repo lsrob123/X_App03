@@ -10,7 +10,6 @@
     <MasterDetailPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                <!--<dashboard:Dashboard></dashboard:Dashboard>-->
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>

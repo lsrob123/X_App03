@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using X3.Domains.Contacts;
 using X3.Domains.Dashboard;
 using Xamarin.Forms;
@@ -22,10 +23,22 @@ namespace X3._Shared.DetailPages
 
         private static NavigationPage CreateDetailPage(Page detailPage)
         {
-            detailPage.ToolbarItems.Add(new ToolbarItem("Filter", null, async () => await Task.Run(() =>
+            var toobarItems = new List<ToolbarItem>
             {
-                var a = 1;
-            })));
+                new ToolbarItem("Filter", null, async () => await Task.Run(() =>
+                    {
+                        var a = 1;
+                    }
+                )),
+                new ToolbarItem("Option", null, async () => await Task.Run(() =>
+                    {
+                        var a = 1;
+                    }
+                ))
+            };
+
+            foreach (var toolbarItem in toobarItems)
+                detailPage.ToolbarItems.Add(toolbarItem);
             return new NavigationPage(detailPage) {BarBackgroundColor = Color.OrangeRed, BarTextColor = Color.White};
         }
     }
